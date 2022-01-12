@@ -2,13 +2,20 @@ import Head from "next/head";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-sky-500">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-sky-500">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap"
+          rel="stylesheet"
+        />
       </Head>
 
       <main className="flex flex-col items-center w-full flex-1 text-center">
+        {/* Nav section */}
         <div className="flex justify-between w-full mt-2 p-4">
           <div className="flex items-center">
             <div>
@@ -22,7 +29,7 @@ export default function Home() {
               <p className="font-bold text-white">Gary Varner</p>
             </div>
           </div>
-          <div className="flex justify-between">
+          <div className="flex justify-between space-x-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
@@ -49,27 +56,21 @@ export default function Home() {
             </svg>
           </div>
         </div>
-        <div className="w-full">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path
-              fill="#fff"
-              fill-opacity="1"
-              d="M0,64L18.5,64C36.9,64,74,64,111,90.7C147.7,117,185,171,222,202.7C258.5,235,295,245,332,234.7C369.2,224,406,192,443,197.3C480,203,517,245,554,234.7C590.8,224,628,160,665,160C701.5,160,738,224,775,261.3C812.3,299,849,309,886,277.3C923.1,245,960,171,997,165.3C1033.8,160,1071,224,1108,245.3C1144.6,267,1182,245,1218,224C1255.4,203,1292,181,1329,192C1366.2,203,1403,245,1422,266.7L1440,288L1440,320L1421.5,320C1403.1,320,1366,320,1329,320C1292.3,320,1255,320,1218,320C1181.5,320,1145,320,1108,320C1070.8,320,1034,320,997,320C960,320,923,320,886,320C849.2,320,812,320,775,320C738.5,320,702,320,665,320C627.7,320,591,320,554,320C516.9,320,480,320,443,320C406.2,320,369,320,332,320C295.4,320,258,320,222,320C184.6,320,148,320,111,320C73.8,320,37,320,18,320L0,320Z"
-            ></path>
-          </svg>
+        <div className="w-[400px]">
+          <h1 className="text-9xl font-black text-white">
+            Maker of <span className="text-black">Stuff</span>.
+          </h1>
         </div>
       </main>
 
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
+      <footer className="w-full">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#fff"
+            fill-opacity="1"
+            d="M0,64L18.5,64C36.9,64,74,64,111,90.7C147.7,117,185,171,222,202.7C258.5,235,295,245,332,234.7C369.2,224,406,192,443,197.3C480,203,517,245,554,234.7C590.8,224,628,160,665,160C701.5,160,738,224,775,261.3C812.3,299,849,309,886,277.3C923.1,245,960,171,997,165.3C1033.8,160,1071,224,1108,245.3C1144.6,267,1182,245,1218,224C1255.4,203,1292,181,1329,192C1366.2,203,1403,245,1422,266.7L1440,288L1440,320L1421.5,320C1403.1,320,1366,320,1329,320C1292.3,320,1255,320,1218,320C1181.5,320,1145,320,1108,320C1070.8,320,1034,320,997,320C960,320,923,320,886,320C849.2,320,812,320,775,320C738.5,320,702,320,665,320C627.7,320,591,320,554,320C516.9,320,480,320,443,320C406.2,320,369,320,332,320C295.4,320,258,320,222,320C184.6,320,148,320,111,320C73.8,320,37,320,18,320L0,320Z"
+          ></path>
+        </svg>
       </footer>
     </div>
   );
