@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { content } from "tailwindcss/defaultTheme";
 
 export default function Home() {
   return (
@@ -62,8 +63,18 @@ export default function Home() {
         </div>
         <div className="w-[400px]">
           <h1 className="text-9xl font-black text-white">
-            Maker of <span className="text-black">Stuff</span>.
+            Maker of <span className="text-rose-500">Stuff</span>.
           </h1>
+        </div>
+        <div className="mt-20 text-left">
+          <h2 className="text-4xl font-black text-white">About Me</h2>
+          <div className="outline-dashed outline-offset-8 outline-4 outline-rose-500 rounded bg-white p-4 max-w-2xl mt-4">
+            <p>
+              Atlanta based javaScript developer.Husband and father to an
+              awesome family that helps me be my best everyday. My love for
+              computers started when I was young and has only grown stronger.
+            </p>
+          </div>
         </div>
       </main>
 
