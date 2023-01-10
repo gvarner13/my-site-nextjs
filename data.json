@@ -1,0 +1,24 @@
+{
+  "name": "Gary Varner",
+  "avatar": "public/gary_headshot_1.jpeg",
+  "links": [
+    {
+      "title": "My Personal Site",
+      "href": "https://garyvarner.me"
+    },
+    {
+      "title": "Insta",
+      "href": "https://www.instagram.com/gvarner13"
+    }
+  ],
+  "socials": [
+    {
+      "title": "Twitter",
+      "href": "https://twitter.com/gsvarner"
+    },
+    {
+      "title": "GitHub",
+      "href": "https://github.com/gvarner13"
+    }
+  ]
+}
