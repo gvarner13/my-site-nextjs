@@ -91,9 +91,9 @@ export default function Home() {
           <h2 className="text-4xl font-black text-white">About Me</h2>
           <div className="outline-dashed outline-offset-8 outline-4 outline-rose-500 rounded bg-white p-4 max-w-2xl mt-4">
             <p>
-              Hi 👋, I am Atlanta based javaScript developer. Husband and father
-              to an awesome family that helps me be my best everyday. My love
-              for computers started when I was young and has only grown
+              Hi 👋, I am an Atlanta based javaScript developer. Husband and
+              father to an awesome family that helps me be my best everyday. My
+              love for computers started when I was young and has only grown
               stronger.
             </p>
           </div>
