@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-sky-500">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-slate-900">
       <Head>
         <title>Gary Varner</title>
         <link rel="icon" href="https://fav.farm/%F0%9F%98%83" />
@@ -78,18 +78,28 @@ export default function Home() {
           </div>
         </div>
         <motion.div
-          className="w-[400px]"
+          className="w-[400px] mt-6"
           initial={{ scale: 0 }}
           animate={{ scale: 1.2 }}
           transition={{ type: "spring", stiffness: 150, damping: 20 }}
         >
-          <h1 className="text-9xl font-black text-white">
-            Maker of <span className="text-rose-500">Stuff</span>.
+          <h1 className="text-8xl font-black text-slate-200">
+            Maker of{" "}
+            <span
+              style={{
+                background: "linear-gradient(to right, #E7FF52, #41FF54)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              Stuff
+            </span>
+            .
           </h1>
         </motion.div>
         <div className="mt-20 text-left">
-          <h2 className="text-4xl font-black text-white">About Me</h2>
-          <div className="outline-dashed outline-offset-8 outline-4 outline-rose-500 rounded bg-white p-4 max-w-2xl mt-4">
+          <h2 className="text-4xl font-black text-slate-200">About Me</h2>
+          <div className="outline-dashed outline-offset-8 outline-4 outline-rose-500/75 rounded bg-slate-200 p-6 max-w-2xl mt-4">
             <p>
               Hi 👋, I am an Atlanta based javaScript developer. Husband and
               father to an awesome family that helps me be my best everyday. My
@@ -103,7 +113,7 @@ export default function Home() {
       <footer className="w-full">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
-            fill="#fff"
+            fill="rgb(226 232 240 / var(--tw-bg-opacity))"
             fillOpacity="1"
             d="M0,64L18.5,64C36.9,64,74,64,111,90.7C147.7,117,185,171,222,202.7C258.5,235,295,245,332,234.7C369.2,224,406,192,443,197.3C480,203,517,245,554,234.7C590.8,224,628,160,665,160C701.5,160,738,224,775,261.3C812.3,299,849,309,886,277.3C923.1,245,960,171,997,165.3C1033.8,160,1071,224,1108,245.3C1144.6,267,1182,245,1218,224C1255.4,203,1292,181,1329,192C1366.2,203,1403,245,1422,266.7L1440,288L1440,320L1421.5,320C1403.1,320,1366,320,1329,320C1292.3,320,1255,320,1218,320C1181.5,320,1145,320,1108,320C1070.8,320,1034,320,997,320C960,320,923,320,886,320C849.2,320,812,320,775,320C738.5,320,702,320,665,320C627.7,320,591,320,554,320C516.9,320,480,320,443,320C406.2,320,369,320,332,320C295.4,320,258,320,222,320C184.6,320,148,320,111,320C73.8,320,37,320,18,320L0,320Z"
           ></path>
