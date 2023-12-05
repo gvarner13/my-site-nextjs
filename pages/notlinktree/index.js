@@ -56,18 +56,39 @@ function BxlInstagram(props) {
   );
 }
 
+export function LaptopIcon(props) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <path
+        fill="#888888"
+        d="M2 20q-.825 0-1.412-.587T0 18h4q-.825 0-1.412-.587T2 16V5q0-.825.588-1.412T4 3h16q.825 0 1.413.588T22 5v11q0 .825-.587 1.413T20 18h4q0 .825-.587 1.413T22 20H2Zm10-1q.425 0 .713-.288T13 18q0-.425-.288-.712T12 17q-.425 0-.712.288T11 18q0 .425.288.713T12 19Zm-8-3h16V5H4v11Zm0 0V5v11Z"
+      ></path>
+    </svg>
+  );
+}
+
 function LinkCard({ title, href }) {
   return (
-    <a
-      href={href}
-      className="flex items-center p-1 w-full rounded-md transition-all bg-gray-200 mb-3 max-w-3xl"
-    >
-      <div className="flex text-center w-full">
-        <h2 className="flex justify-center items-center font-semibold w-full text-gray-700">
-          {title}
-        </h2>
-      </div>
-    </a>
+    <li>
+      <a href={href}>
+        <div className="-m-1 flex items-center space-x-2 rounded-xl bg-slate-50 p-1 shadow-sm hover:bg-slate-100">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-slate-500">
+            <LaptopIcon />
+          </div>
+          <div className="w-full min-w-0 grow">
+            <p className="text-sm font-medium leading-6 text-accent-foreground">
+              {title}
+            </p>
+          </div>
+        </div>
+      </a>
+    </li>
   );
 }
 
@@ -75,19 +96,25 @@ export default function NotLinkTree() {
   return (
     <div
       className="h-screen bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)]"
-      style={{ backgroundSize: "6rem 4rem" }}
+      style={{ backgroundSize: "4rem 2rem" }}
     >
-      <div className="flex items-center flex-col mx-auto max-w-lg justify-center px-8 pt-16">
-        <img
-          className="h-24 w-24 rounded-full ring-2 hover:grayscale"
-          src="/gary_headshot_1.jpeg"
-          alt=""
-        />
-        <h1 className="font-bold mt-4 mb-8 text-xl text-white">{data.name}</h1>
-        {data.links.map((link) => (
-          <LinkCard key={link.href} {...link} />
-        ))}
-        <div className="flex items-center gap-4 mt-8 text-white">
+      <div className="hide_scrollbar mx-auto h-full w-full max-w-lg space-y-8 overflow-y-scroll px-2 pt-8">
+        <div className="text-center">
+          <span className="relative flex shrink-0 mx-auto h-20 w-20 overflow-hidden rounded-full ring ring-slate-200">
+            <img
+              className="aspect-square h-full w-full object-cover"
+              src="/gary_headshot_1.jpeg"
+              alt=""
+            />
+          </span>
+          <h1 className="mt-4 text-2xl font-bold text-slate-800">
+            {data.name}
+          </h1>
+          <p className="mt-2 text-sm text-slate-600">
+            I'm a self-taught developer that loves what I do.
+          </p>
+        </div>
+        <div className="flex flex-wrap items-center justify-center">
           {data.socials.map((social) => (
             <a
               aria-label={`${social.title} link`}
@@ -106,6 +133,11 @@ export default function NotLinkTree() {
             </a>
           ))}
         </div>
+        <ul className="space-y-2">
+          {data.links.map((link) => (
+            <LinkCard key={link.href} {...link} />
+          ))}
+        </ul>
       </div>
     </div>
   );
