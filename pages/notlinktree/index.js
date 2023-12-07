@@ -98,7 +98,7 @@ export default function NotLinkTree() {
       className="h-screen bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)]"
       style={{ backgroundSize: "4rem 2rem" }}
     >
-      <div className="hide_scrollbar mx-auto h-full w-full max-w-lg space-y-8 overflow-y-scroll px-2 pt-8">
+      <div className="hide_scrollbar mx-auto h-full w-full max-w-lg space-y-8 overflow-y-scroll px-4 pt-8">
         <div className="text-center">
           <span className="relative flex shrink-0 mx-auto h-20 w-20 overflow-hidden rounded-full ring ring-slate-200">
             <img

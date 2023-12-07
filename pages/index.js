@@ -20,6 +20,10 @@ export default function Home() {
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap"
           rel="stylesheet"
         />
+        <meta
+          property="og:image"
+          content="https://og-examples.vercel.sh/api/static"
+        />
       </Head>
 
       <main className="flex flex-col items-center w-full flex-1 text-center">
@@ -86,7 +90,7 @@ export default function Home() {
           animate={{ scale: 1.2 }}
           transition={{ type: "spring", stiffness: 150, damping: 20 }}
         >
-          <h1 className="text-8xl font-black text-slate-400">
+          <h1 className="md:text-8xl text-6xl font-black text-slate-400">
             Maker of{" "}
             <span
               style={{
@@ -100,7 +104,7 @@ export default function Home() {
             .
           </h1>
         </motion.div>
-        <div className="mt-20 text-left">
+        <div className="mt-20 text-left px-4">
           <h2 className="text-4xl font-black text-slate-400">About Me</h2>
           <div className="outline-dashed outline-offset-8 outline-4 outline-rose-500/75 rounded bg-slate-400 p-6 max-w-2xl mt-4">
             <p>
