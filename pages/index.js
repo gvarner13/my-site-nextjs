@@ -24,6 +24,7 @@ export default function Home() {
           property="og:image"
           content="https://og-examples.vercel.sh/api/static"
         />
+        <meta property="og:title" content="Gary Varner Site" />
       </Head>
 
       <main className="flex flex-col items-center w-full flex-1 text-center">
