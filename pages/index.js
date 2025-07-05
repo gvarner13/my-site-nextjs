@@ -1,7 +1,14 @@
 import Head from "next/head";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const currentDay = days[new Date().getDay()];
+    console.log(`Welcome to my site and hopefully this ${currentDay} is going good for you.`);
+  }, []);
+
   return (
     <div
       className="flex flex-col items-center justify-center min-h-screen bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)]"
