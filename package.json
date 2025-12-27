@@ -6,7 +6,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "@latetest": "link:next/@latetest",
     "@pixi/core": "^7.4.3",
     "@pixi/utils": "^7.4.3",
     "clsx": "^2.1.1",

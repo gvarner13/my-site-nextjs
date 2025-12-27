@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@latetest':
-        specifier: link:next/@latetest
-        version: link:next/@latetest
       '@pixi/core':
         specifier: ^7.4.3
         version: 7.4.3
