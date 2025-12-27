@@ -6,27 +6,28 @@
     "start": "next start"
   },
   "dependencies": {
+    "@latetest": "link:next/@latetest",
     "@pixi/core": "^7.4.3",
     "@pixi/utils": "^7.4.3",
     "clsx": "^2.1.1",
-    "framer-motion": "^12.20.1",
-    "motion": "^12.23.0",
-    "next": "^15.3.4",
-    "p5": "^2.0.5",
-    "pixi.js": "^8.14.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "framer-motion": "^12.23.26",
+    "motion": "^12.23.26",
+    "next": "^16.1.1",
+    "p5": "^2.1.2",
+    "pixi.js": "^8.14.3",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
     "simplex-noise": "^4.0.3",
-    "tailwind-merge": "^3.3.1"
+    "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.11",
-    "@types/node": "^24.9.1",
-    "@types/react": "^19.2.2",
-    "@types/react-dom": "^19.2.2",
-    "autoprefixer": "^10.4.0",
-    "postcss": "^8.4.4",
-    "tailwindcss": "^4.1.11",
+    "@tailwindcss/postcss": "^4.1.18",
+    "@types/node": "^25.0.3",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10.4.23",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3"
   }
 }
