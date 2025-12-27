@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 import { GitIcon } from "../components/icons/git-icon";
 import { XIcon } from "../components/icons/x-icon";
 import { TablerCamera } from "../components/icons/camera-icon";
