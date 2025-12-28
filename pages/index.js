@@ -7,6 +7,7 @@ import { XIcon } from "../components/icons/x-icon";
 import { TablerCamera } from "../components/icons/camera-icon";
 import { TablerPlaneTilt } from "../components/icons/plane-icon";
 import NoiseBackground from "../components/ui/background-noise";
+import Navbar from "../components/ui/navbar";
 
 export default function Home() {
   useEffect(() => {
@@ -43,35 +44,7 @@ export default function Home() {
       <NoiseBackground />
       <main className="flex flex-col items-center w-full flex-1 text-center">
         {/* Nav section */}
-        <div className="flex justify-between w-full mt-2 p-8">
-          <div className="flex items-center">
-            <div className="ml-3">
-              <a href="/" className="dark:text-gray-100">
-                GV
-              </a>
-            </div>
-          </div>
-          <div className="grid grid-flow-col gap-4 dark:text-gray-100">
-            <Link href="/blog" className="hover:text-pink-500">
-              Blog
-            </Link>
-            <Link href="/projects" className="hover:text-pink-500">
-              Projects
-            </Link>
-            <a href="/photos">
-              <TablerCamera className="w-5 h-5 hover:text-pink-500" />
-            </a>
-            <a href="/travels">
-              <TablerPlaneTilt className="w-5 h-5 hover:text-pink-500" />
-            </a>
-            <a href="https://github.com/gvarner13">
-              <GitIcon className="w-5 h-5 hover:text-pink-500" />
-            </a>
-            <a href="https://twitter.com/GSVarner">
-              <XIcon className="w-5 h-5 hover:text-pink-500" />
-            </a>
-          </div>
-        </div>
+        <Navbar />
         <div className="mt-20 text-left px-4 max-w-2xl [&_a]:hover:underline [&_a]:decoration-pink-500 [&_a]:underline-offset-4 [&_a]:dark:text-gray-100 [&_a]:font-semibold">
           <p className="dark:text-gray-300 py-4">
             Hey! I’m Gary Varner, an obsessed tinkerer with crazy ideas and good
