@@ -46,46 +46,43 @@ export default function Home() {
         <div className="flex justify-between w-full mt-2 p-8">
           <div className="flex items-center">
             <div className="ml-3">
-              <a href="/" className="text-gray-100">
+              <a href="/" className="dark:text-gray-100">
                 GV
               </a>
             </div>
           </div>
-          <div className="grid grid-flow-col gap-4">
-            <Link href="/blog" className="hover:text-pink-500 text-gray-100">
+          <div className="grid grid-flow-col gap-4 dark:text-gray-100">
+            <Link href="/blog" className="hover:text-pink-500">
               Blog
             </Link>
-            <Link
-              href="/projects"
-              className="hover:text-pink-500 text-gray-100"
-            >
+            <Link href="/projects" className="hover:text-pink-500">
               Projects
             </Link>
             <a href="/photos">
-              <TablerCamera className="w-5 h-5 hover:text-pink-500 text-gray-100" />
+              <TablerCamera className="w-5 h-5 hover:text-pink-500" />
             </a>
             <a href="/travels">
-              <TablerPlaneTilt className="w-5 h-5 hover:text-pink-500 text-gray-100" />
+              <TablerPlaneTilt className="w-5 h-5 hover:text-pink-500" />
             </a>
             <a href="https://github.com/gvarner13">
-              <GitIcon className="w-5 h-5 hover:text-pink-500 text-gray-100" />
+              <GitIcon className="w-5 h-5 hover:text-pink-500" />
             </a>
             <a href="https://twitter.com/GSVarner">
-              <XIcon className="w-5 h-5 hover:text-pink-500 text-gray-100" />
+              <XIcon className="w-5 h-5 hover:text-pink-500" />
             </a>
           </div>
         </div>
-        <div className="mt-20 text-left px-4 max-w-2xl [&_a]:hover:underline [&_a]:decoration-pink-500 [&_a]:underline-offset-4 [&_a]:text-gray-100 [&_a]:font-semibold">
-          <p className="text-gray-100 py-4">
+        <div className="mt-20 text-left px-4 max-w-2xl [&_a]:hover:underline [&_a]:decoration-pink-500 [&_a]:underline-offset-4 [&_a]:dark:text-gray-100 [&_a]:font-semibold">
+          <p className="dark:text-gray-300 py-4">
             Hey! I’m Gary Varner, an obsessed tinkerer with crazy ideas and good
             espresso.
           </p>
-          <p className="text-gray-100 py-4">
+          <p className="dark:text-gray-300 py-4">
             Hi, I am an Atlanta based typescript developer. I love to build
             software that solves problems for people. I am trying to list my
             hairbrain <a href="/projects">projects</a> here.
           </p>
-          <p className="text-gray-300 py-4">
+          <p className="dark:text-gray-300 py-4">
             I am also a fan of traveling the globe, camping, and the occasional
             round of golf. You can see some of my <a href="/travels">travels</a>{" "}
             here. I also have some of my <a href="/photos">photos here</a> for
