@@ -23,11 +23,7 @@ export default function travels() {
         <Navbar />
         <h1>Travels</h1>
         <div className="flex flex-col items-center">
-          <ul>
-            <li>Travel 1</li>
-            <li>Travel 2</li>
-            <li>Travel 3</li>
-          </ul>
+          <div>Comming Soon</div>
         </div>
       </main>
     </div>
