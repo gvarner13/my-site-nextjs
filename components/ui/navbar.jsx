@@ -9,7 +9,9 @@ export default function Navbar() {
     <div className="flex justify-between w-full mt-2 p-8">
       <div className="flex items-center">
         <div className="ml-3">
-          <p className="dark:text-gray-100">GV</p>
+          <Link href="/" className="dark:text-gray-100">
+            GV
+          </Link>
         </div>
       </div>
       <div className="grid grid-flow-col gap-4 dark:text-gray-100">
