@@ -21,12 +21,12 @@ export default function Navbar() {
         <Link href="/projects" className="hover:text-pink-500">
           Projects
         </Link>
-        <a href="/photos">
+        <Link href="/photos">
           <TablerCamera className="w-5 h-5 hover:text-pink-500" />
-        </a>
-        <a href="/travels">
+        </Link>
+        <Link href="/travels">
           <TablerPlaneTilt className="w-5 h-5 hover:text-pink-500" />
-        </a>
+        </Link>
         <a href="https://github.com/gvarner13">
           <GitIcon className="w-5 h-5 hover:text-pink-500" />
         </a>

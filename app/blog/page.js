@@ -1,7 +1,6 @@
-import Head from "next/head";
-import NoiseBackground from "../components/ui/background-noise";
-import Navbar from "../components/ui/navbar";
-import BlogPost from "../components/ui/blog-post";
+import NoiseBackground from "../../components/ui/background-noise";
+import Navbar from "../../components/ui/navbar";
+import BlogPost from "../../components/ui/blog-post";
 
 const posts = [
   {
@@ -29,16 +28,6 @@ export default function Blog() {
       className="flex flex-col items-center justify-center min-h-screen text-gray-100"
       style={{ backgroundSize: "4rem 2rem" }}
     >
-      <Head>
-        <title>Gary Varner</title>
-        <link rel="icon" href="https://fav.farm/%F0%9F%98%83" />
-        <meta
-          property="og:image"
-          content="https://og-examples.vercel.sh/api/static"
-        />
-        <meta property="og:title" content="Gary Varner Site" />
-      </Head>
-
       <NoiseBackground />
       <main className="flex flex-col items-center w-full flex-1">
         <Navbar />
