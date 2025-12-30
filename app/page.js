@@ -1,11 +1,7 @@
-import Head from "next/head";
+"use client";
+
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { useEffect } from "react";
-import { GitIcon } from "../components/icons/git-icon";
-import { XIcon } from "../components/icons/x-icon";
-import { TablerCamera } from "../components/icons/camera-icon";
-import { TablerPlaneTilt } from "../components/icons/plane-icon";
 import NoiseBackground from "../components/ui/background-noise";
 import Navbar from "../components/ui/navbar";
 
@@ -31,16 +27,6 @@ export default function Home() {
       className="flex flex-col items-center justify-center min-h-screen"
       style={{ backgroundSize: "4rem 2rem" }}
     >
-      <Head>
-        <title>Gary Varner</title>
-        <link rel="icon" href="https://fav.farm/%F0%9F%98%83" />
-        <meta
-          property="og:image"
-          content="https://og-examples.vercel.sh/api/static"
-        />
-        <meta property="og:title" content="Gary Varner Site" />
-      </Head>
-
       <NoiseBackground />
       <main className="flex flex-col items-center w-full flex-1 text-center">
         {/* Nav section */}
@@ -53,12 +39,12 @@ export default function Home() {
           <p className="dark:text-gray-300 py-4">
             Hi, I am an Atlanta based typescript developer. I love to build
             software that solves problems for people. I am trying to list my
-            hairbrain <a href="/projects">projects</a> here.
+            hairbrain <Link href="/projects">projects</Link> here.
           </p>
           <p className="dark:text-gray-300 py-4">
             I am also a fan of traveling the globe, camping, and the occasional
-            round of golf. You can see some of my <a href="/travels">travels</a>{" "}
-            here. I also have some of my <a href="/photos">photos here</a> for
+            round of golf. You can see some of my <Link href="/travels">travels</Link>{" "}
+            here. I also have some of my <Link href="/photos">photos here</Link> for
             your viewing pleasure.
           </p>
         </div>
