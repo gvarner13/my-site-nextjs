@@ -43,9 +43,9 @@ export default function Home() {
           </p>
           <p className="dark:text-gray-300 py-4">
             I am also a fan of traveling the globe, camping, and the occasional
-            round of golf. You can see some of my <Link href="/travels">travels</Link>{" "}
-            here. I also have some of my <Link href="/photos">photos here</Link> for
-            your viewing pleasure.
+            round of golf. You can see some of my{" "}
+            <Link href="/travels">travels</Link> here. I also have some of my{" "}
+            <Link href="/photos">photos here</Link> for your viewing pleasure.
           </p>
         </div>
       </main>

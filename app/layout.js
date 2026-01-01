@@ -13,8 +13,24 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(() => {
+  try {
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const storedTheme = localStorage.theme;
+    const isDark = storedTheme === "dark" || (!("theme" in localStorage) && prefersDark);
+    document.documentElement.classList.toggle("dark", isDark);
+  } catch (error) {
+    // If access to localStorage is blocked, fall back to system preference.
+  }
+})();`,
+          }}
+        />
+      </head>
+      <body className="dark:bg-black">{children}</body>
     </html>
   );
 }
