@@ -34,9 +34,6 @@ const SPACING = 15;
 
 const noise3d = createNoise3D();
 
-const existingPoints = new Set();
-const points = [];
-
 function getForceOnPoint(x, y, z) {
   return (noise3d(x / SCALE, y / SCALE, z) - 0.5) * 2 * Math.PI;
 }
@@ -52,6 +49,9 @@ export default function NoiseBackground() {
   const appRef = useRef(null);
 
   useEffect(() => {
+    const existingPoints = new Set();
+    const points = [];
+
     async function setup() {
       const container = containerRef.current;
       if (!container) return;
@@ -78,12 +78,12 @@ export default function NoiseBackground() {
             const id = `${x}-${y}`;
             if (existingPoints.has(id)) continue;
             existingPoints.add(id);
-      
+
             const particle = new Particle(dotTexture);
             particle.anchorX = 0.5;
             particle.anchorY = 0.5;
             particleContainer.addParticle(particle);
-      
+
             const opacity = Math.random() * 0.5 + 0.5;
             points.push({ x, y, opacity, particle });
           }
@@ -113,17 +113,17 @@ export default function NoiseBackground() {
           particle.alpha = (Math.abs(Math.cos(rad)) * 0.8 + 0.2) * opacity;
         }
       });
-      addPoints({ dotTexture, particleContainer })
+      addPoints({ dotTexture, particleContainer });
     }
     setup();
 
-    // // Cleanup
-    // return () => {
-    //   app.ticker.remove(draw);
-    //   app.stage.removeChildren();
-    //   app?.destroy(true, { children: true, texture: true, baseTexture: true });
-    //   if (container.contains(app.canvas)) container.removeChild(app.canvas);
-    // };
+    return () => {
+      const app = appRef.current;
+      if (app) {
+        app.destroy(true, { children: true });
+        appRef.current = null;
+      }
+    };
   }, []);
 
   return (
