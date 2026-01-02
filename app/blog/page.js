@@ -18,7 +18,7 @@ export default async function Blog() {
         <p className="mt-3 text-base text-gray-300 max-w-xl">
           Notes on travel, creativity, and building for the web.
         </p>
-        <div className="mx-auto mt-10 max-w-2xl gap-x-8 gap-y-16 border-t border-gray-700 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none">
+        <div className="mx-auto mt-10 max-w-2xl gap-x-8 gap-y-16 border-t border-gray-700 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none space-y-8">
           {posts.map((post) => (
             <BlogPost key={post.slug} post={post} />
           ))}
