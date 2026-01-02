@@ -7,14 +7,17 @@ export default function BlogPost({ post }) {
       className="flex max-w-xl flex-col items-start justify-between"
     >
       {hasMeta ? (
-        <div className="flex items-center gap-x-4 text-xs">
+        <div className="flex items-center gap-x-4 text-xs border-l border-pink-500 pl-1">
           {post.date ? (
-            <time dateTime={post.datetime || post.date} className="text-gray-400">
+            <time
+              dateTime={post.datetime || post.date}
+              className="text-gray-400"
+            >
               {post.date}
             </time>
           ) : null}
           {post.readTime ? (
-            <span className="relative z-10 rounded-full bg-gray-800/60 px-3 py-1.5 font-medium text-gray-300">
+            <span className="rounded-full bg-gray-800/60 px-2 py-1 font-medium text-gray-300 text-xs">
               {post.readTime}
             </span>
           ) : null}
